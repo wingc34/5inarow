@@ -1,0 +1,26 @@
+{
+  "name": "5-in-a-row",
+  "version": "1.0.0",
+  "description": "A casual game call 5 in a row",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/wingc34/5-in-a-row",
+  "keywords": [
+    "Electron",
+    "5inarow",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "electron": "^6.0.10",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0"
+  }
+}

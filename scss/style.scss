@@ -1,0 +1,228 @@
+$chessSize: 15;
+$chessBlockSize: 50px;
+$chessBlockSizeHalf: $chessBlockSize/2;
+$stoneSize: $chessBlockSize/1.5;
+$red: red;
+$blue: blue;
+$black: black;
+$white: white;
+$aqua: aqua;
+$burlywood: burlywood;
+
+
+@mixin border {
+    content: "";
+    position: absolute;
+    border: solid 1px $black;
+    //z-index: 1;
+}
+
+.gameScreen {
+    width: 1200px;
+    height: 850px;
+
+    .game {
+        background-color: $aqua;
+        color: $red;
+
+        .chessBoard {
+            display: grid;
+            grid-template-columns: repeat($chessSize, $chessBlockSize);
+            grid-template-rows: repeat($chessSize, $chessBlockSize);
+            position: relative;
+
+            .chessBlock {
+                background-color: $burlywood;
+                position: relative;
+
+                &.leftTop {
+                    &:before {
+                        @include border;
+                        height: $chessBlockSizeHalf;
+                        left: $chessBlockSizeHalf;
+                        top: $chessBlockSizeHalf;
+                    }
+
+                    &:after {
+                        @include border;
+                        width: $chessBlockSizeHalf;
+                        left: $chessBlockSizeHalf;
+                        top: $chessBlockSizeHalf;
+                    }
+                }
+
+                &.middleTop{
+                    &:before {
+                        @include border;
+                        height: $chessBlockSizeHalf;
+                        left: $chessBlockSizeHalf;
+                        top: $chessBlockSizeHalf;
+                    }
+
+                    &:after {
+                        @include border;
+                        width: $chessBlockSize;
+                        top: $chessBlockSizeHalf;
+                    }
+                }
+
+                &.rightTop {
+
+                    &:before {
+                        @include border;
+                        height: $chessBlockSizeHalf;
+                        left: $chessBlockSizeHalf;
+                        top: $chessBlockSizeHalf;
+                    }
+
+                    &:after {
+                        @include border;
+                        width: $chessBlockSizeHalf;
+                        top: $chessBlockSizeHalf;
+                    }
+                }
+
+                &.leftMiddle{
+
+                    &:before {
+                        @include border;
+                        height: $chessBlockSize;
+                        left: $chessBlockSizeHalf;
+                    }
+
+                    &:after {
+                        @include border;
+                        width: $chessBlockSizeHalf;
+                        left: $chessBlockSizeHalf;
+                        top: $chessBlockSizeHalf;
+                    }
+                }
+
+                &.middle{                    
+                    &:before {
+                        @include border;
+                        height: $chessBlockSize;
+                        left: $chessBlockSizeHalf;
+                    }
+
+                    &:after {
+                        @include border;
+                        width: $chessBlockSize;
+                        top: $chessBlockSizeHalf;
+                    }
+                }
+
+                &.rightMiddle{
+                    &:before {
+                        @include border;
+                        height: $chessBlockSize;
+                        left: $chessBlockSizeHalf;
+                    }
+
+                    &:after {
+                        @include border;
+                        width: $chessBlockSizeHalf;
+                        top: $chessBlockSizeHalf;
+                    }
+                }
+                
+                &.leftBottom {
+                    &:before {
+                        @include border;
+                        height: $chessBlockSizeHalf;
+                        left: $chessBlockSizeHalf;
+                    }
+
+                    &:after {
+                        @include border;
+                        width: $chessBlockSizeHalf;
+                        left: $chessBlockSizeHalf;
+                        top: $chessBlockSizeHalf;
+                    }
+                }
+
+                &.middleBottom{
+                    &:before {
+                        @include border;
+                        height: $chessBlockSizeHalf;
+                        left: $chessBlockSizeHalf;
+                    }
+
+                    &:after {
+                        @include border;
+                        width: $chessBlockSize;
+                        top: $chessBlockSizeHalf;
+                    }
+                }
+
+                &.rightBottom{
+                    &:before {
+                        @include border;
+                        height: $chessBlockSizeHalf + 2;
+                        left: $chessBlockSizeHalf;
+                    }
+
+                    &:after {
+                        @include border;
+                        width: $chessBlockSizeHalf + 2;
+                        top: $chessBlockSizeHalf;
+                    }
+                }
+
+                .stone {
+                    position: absolute;
+                    border-radius: 50%;
+                    width: $stoneSize;
+                    height: $stoneSize;
+                    margin: 10px;
+                    z-index: 2;
+
+                    &.black {
+                        background-color: $black;
+                    }
+
+                    &.white {
+                        background-color: $white;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .playerInfo {
+        background-color: $blue;
+        color: $red;
+
+        .playerTurn{
+            font-size: 40px;
+            color: $black;
+            &.white{
+                color: $white;
+            }
+            &.black{
+                color: $black;
+            }
+        }
+
+        .winMessage{
+            font-size: 40px;
+            color: $black;
+            &.white{
+                color: $white;
+            }
+            &.black{
+                color: $black;
+            }
+        }
+
+        // .buttonGroup{
+        //     .PVP{
+
+        //     }
+        //     .PVE{
+                
+        //     }
+        // }
+    }
+}

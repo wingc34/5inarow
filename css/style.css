@@ -1,0 +1,223 @@
+.gameScreen {
+  width: 1200px;
+  height: 850px;
+}
+
+.gameScreen .game {
+  background-color: aqua;
+  color: red;
+}
+
+.gameScreen .game .chessBoard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[15];
+      grid-template-columns: repeat(15, 50px);
+  -ms-grid-rows: (50px)[15];
+      grid-template-rows: repeat(15, 50px);
+  position: relative;
+}
+
+.gameScreen .game .chessBoard .chessBlock {
+  background-color: burlywood;
+  position: relative;
+}
+
+.gameScreen .game .chessBoard .chessBlock.leftTop:before {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  height: 25px;
+  left: 25px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.leftTop:after {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  width: 25px;
+  left: 25px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.middleTop:before {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  height: 25px;
+  left: 25px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.middleTop:after {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  width: 50px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.rightTop:before {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  height: 25px;
+  left: 25px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.rightTop:after {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  width: 25px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.leftMiddle:before {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  height: 50px;
+  left: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.leftMiddle:after {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  width: 25px;
+  left: 25px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.middle:before {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  height: 50px;
+  left: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.middle:after {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  width: 50px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.rightMiddle:before {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  height: 50px;
+  left: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.rightMiddle:after {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  width: 25px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.leftBottom:before {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  height: 25px;
+  left: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.leftBottom:after {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  width: 25px;
+  left: 25px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.middleBottom:before {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  height: 25px;
+  left: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.middleBottom:after {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  width: 50px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.rightBottom:before {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  height: 27px;
+  left: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock.rightBottom:after {
+  content: "";
+  position: absolute;
+  border: solid 1px black;
+  width: 27px;
+  top: 25px;
+}
+
+.gameScreen .game .chessBoard .chessBlock .stone {
+  position: absolute;
+  border-radius: 50%;
+  width: 33.33333px;
+  height: 33.33333px;
+  margin: 10px;
+  z-index: 2;
+}
+
+.gameScreen .game .chessBoard .chessBlock .stone.black {
+  background-color: black;
+}
+
+.gameScreen .game .chessBoard .chessBlock .stone.white {
+  background-color: white;
+}
+
+.gameScreen .playerInfo {
+  background-color: blue;
+  color: red;
+}
+
+.gameScreen .playerInfo .playerTurn {
+  font-size: 40px;
+  color: black;
+}
+
+.gameScreen .playerInfo .playerTurn.white {
+  color: white;
+}
+
+.gameScreen .playerInfo .playerTurn.black {
+  color: black;
+}
+
+.gameScreen .playerInfo .winMessage {
+  font-size: 40px;
+  color: black;
+}
+
+.gameScreen .playerInfo .winMessage.white {
+  color: white;
+}
+
+.gameScreen .playerInfo .winMessage.black {
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */
