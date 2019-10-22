@@ -28,7 +28,7 @@ if any player connect a row in 5 of their stone, then win!
 ![win](screenshots/win.PNG)
 
 ### Libraries and frameworks used
-* electrons
+* electron
 * jQuery
 * bootstrap
 * SASS & SCSS
